@@ -37,12 +37,12 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#050505] text-white selection:bg-blue-600/30 selection:text-blue-200 font-sans">
+    <div className="min-h-screen bg-[#000000] text-white selection:bg-blue-600/30 selection:text-blue-200 font-sans">
       {/* Background Effects */}
       <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:64px_64px]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-600/5 via-transparent to-transparent" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-blue-500/10 blur-[120px] rounded-full opacity-30" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808005_1px,transparent_1px),linear-gradient(to_bottom,#80808005_1px,transparent_1px)] bg-[size:64px_64px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-600/2 via-transparent to-transparent" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-blue-500/5 blur-[120px] rounded-full opacity-20" />
       </div>
 
       {/* Navbar */}
@@ -55,7 +55,7 @@ export default function App() {
             <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center group-hover:rotate-12 transition-transform duration-300 shadow-[0_0_20px_rgba(59,130,246,0.3)]">
               <Code2 size={22} />
             </div>
-            <span className="hidden sm:inline-block font-display italic">AYOMIDE<span className="text-blue-500 not-italic text-sm align-top ml-1">®</span></span>
+            <span className="hidden sm:inline-block font-display tracking-tight">AYOMIDE<span className="text-blue-500 font-black">.</span></span>
           </motion.a>
 
           <div className="hidden md:flex items-center gap-10">
@@ -84,7 +84,7 @@ export default function App() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="md:hidden absolute top-full left-0 w-full bg-[#0a0a0a] border-b border-white/10 shadow-2xl"
+              className="md:hidden absolute top-full left-0 w-full bg-[#050505] border-b border-white/5 shadow-2xl"
             >
               <div className="flex flex-col p-8 gap-6">
                 {navLinks.map((link) => (
@@ -105,16 +105,16 @@ export default function App() {
 
       <main className="relative z-10">
         {/* Hero Section */}
-        <section id="about" className="pt-48 pb-32 px-6 max-w-7xl mx-auto min-h-screen flex flex-col justify-center">
+        <section id="about" className="pt-48 pb-32 px-6 max-w-7xl mx-auto min-h-[90vh] flex flex-col justify-center">
           <div className="grid lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-8 flex flex-col items-start">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-[10px] font-black uppercase tracking-[0.2em] mb-10"
+                className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-[10px] font-bold uppercase tracking-[0.2em] mb-10"
               >
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-ping" />
-                Open for Collaboration
+                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
+                Available for New Projects
               </motion.div>
               
               <motion.h1 
@@ -134,7 +134,7 @@ export default function App() {
                 transition={{ delay: 0.4 }}
                 className="text-xl md:text-2xl text-gray-400 mb-14 max-w-2xl leading-tight font-light italic"
               >
-                A <span className="text-white font-medium border-b border-blue-500/50">Prodigy Developer</span> from Ibadan, obsessed with crafting high-performance digital ecosystems and fluid user interfaces. Expert at building at 
+                A <span className="text-white font-medium border-b border-blue-500/50">Prodigy Developer</span> from Ibadan, obsessed with crafting high-performance digital ecosystems and fluid user interfaces at 
                 <span className="text-white"> Larva Tech Academy.</span>
               </motion.p>
 
@@ -144,40 +144,40 @@ export default function App() {
                 transition={{ delay: 0.6 }}
                 className="flex flex-wrap gap-5"
               >
-                <a href="#projects" className="bg-blue-600 hover:bg-blue-500 text-white px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-xs transition-all flex items-center gap-3 group shadow-2xl">
-                  Scroll for Work
+                <a href="#projects" className="bg-blue-600 hover:bg-blue-500 text-white px-10 py-4 rounded-xl font-bold uppercase tracking-widest text-xs transition-all flex items-center gap-3 group shadow-xl">
+                  View My Work
                   <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </a>
-                <a href="mailto:ayomideoyebade884@gmail.com" className="bg-white/5 hover:bg-white/10 border border-white/10 px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-xs transition-all flex items-center gap-3 group">
-                  Send Mail
+                <a href="mailto:ayomideoyebade884@gmail.com" className="bg-white/5 hover:bg-white/10 border border-white/10 px-10 py-4 rounded-xl font-bold uppercase tracking-widest text-xs transition-all flex items-center gap-3 group">
+                  Get in Touch
                   <ArrowUpRight size={18} className="group-hover:rotate-45 transition-transform" />
                 </a>
               </motion.div>
             </div>
 
             <motion.div 
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.2 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="lg:col-span-4 hidden lg:block"
             >
               <div className="relative group">
-                <div className="absolute -inset-4 bg-blue-600/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-                <div className="relative aspect-[3/4] rounded-[3rem] overflow-hidden border border-white/10 bg-white/5">
+                <div className="absolute -inset-4 bg-blue-600/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+                <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 p-2">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-transparent z-10" />
                   <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1200&auto=format&fit=crop" 
-                    alt="Ayomide Portrait"
-                    className="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
+                    src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop" 
+                    alt="Code Workspace"
+                    className="w-full h-full object-cover rounded-[1.5rem] grayscale group-hover:grayscale-0 transition-all duration-700"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
                 </div>
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* Marquee Strip */}
+        {/* Marquee Strip - Simplified */}
         <section className="bg-blue-600 py-6 overflow-hidden transform skew-y-[-1deg] z-20 sticky top-0 md:relative">
           <div className="flex gap-12 whitespace-nowrap animate-infinite-scroll">
             {[...Array(10)].map((_, i) => (
@@ -192,6 +192,7 @@ export default function App() {
             ))}
           </div>
         </section>
+
 
         {/* Projects Section */}
         <section id="projects" className="py-40 px-6 relative">
@@ -356,7 +357,7 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="pt-60 pb-12 px-6 bg-[#050505]">
+      <footer className="pt-60 pb-12 px-6 bg-[#000000]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end gap-12">
           <div className="space-y-6">
             <div className="text-4xl font-black italic tracking-tighter">AYOMIDE<span className="text-blue-500">.</span></div>

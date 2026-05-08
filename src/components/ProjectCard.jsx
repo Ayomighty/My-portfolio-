@@ -18,7 +18,7 @@ const ProjectCard = ({ project, index }) => {
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-transparent to-transparent opacity-60" />
         
         <div className="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px]">
           <motion.div 
