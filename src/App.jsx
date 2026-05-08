@@ -1,18 +1,12 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   Code2, 
+  ChevronRight, 
   Mail, 
   MapPin, 
   GraduationCap, 
-  ExternalLink, 
   Calendar, 
-  ChevronRight, 
   Menu, 
   X,
   CheckCircle2,
@@ -56,8 +50,6 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <motion.a 
             href="#about"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
             className="text-2xl font-bold tracking-tighter flex items-center gap-3 group"
           >
             <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center group-hover:rotate-12 transition-transform duration-300 shadow-[0_0_20px_rgba(59,130,246,0.3)]">
@@ -142,7 +134,7 @@ export default function App() {
                 transition={{ delay: 0.4 }}
                 className="text-xl md:text-2xl text-gray-400 mb-14 max-w-2xl leading-tight font-light italic"
               >
-                A 19-year-old <span className="text-white font-medium border-b border-blue-500/50">Prodigy Developer</span> from Ibadan, obsessed with crafting high-performance digital ecosystems and fluid user interfaces at 
+                A <span className="text-white font-medium border-b border-blue-500/50">Prodigy Developer</span> from Ibadan, obsessed with crafting high-performance digital ecosystems and fluid user interfaces. Expert at building at 
                 <span className="text-white"> Larva Tech Academy.</span>
               </motion.p>
 
@@ -231,16 +223,13 @@ export default function App() {
                 {SKILLS.map((skill, index) => (
                   <motion.div
                     key={skill}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
                     whileHover={{ 
                       y: -8, 
                       backgroundColor: 'rgba(59, 130, 246, 0.1)', 
                       borderColor: 'rgba(59, 130, 246, 0.5)',
                       boxShadow: '0 10px 30px -10px rgba(59, 130, 246, 0.3)'
                     }}
-                    transition={{ delay: index * 0.05 }}
-                    viewport={{ once: true }}
+                    transition={{ duration: 0.2 }}
                     className="px-8 py-4 rounded-2xl bg-white/[0.03] border border-white/10 transition-all cursor-default flex items-center gap-4 group"
                   >
                     <div className="w-2.5 h-2.5 rounded-full bg-blue-500 group-hover:scale-150 transition-transform shadow-[0_0_10px_rgba(59,130,246,1)]" />
@@ -353,7 +342,7 @@ export default function App() {
                   { icon: Twitter, href: "#" }
                 ].map((social, i) => (
                   <a 
-                    key={social.href + i} 
+                    key={i} 
                     href={social.href}
                     className="w-20 h-20 bg-black text-white rounded-3xl flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300 shadow-2xl hover:-translate-y-2"
                   >

@@ -2,21 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ExternalLink, ChevronRight } from 'lucide-react';
 
-interface Project {
-  id: string;
-  title: string;
-  description: string;
-  tags: string[];
-  image: string;
-  link: string;
-}
-
-interface ProjectCardProps {
-  project: Project;
-  index: number;
-}
-
-const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
+const ProjectCard = ({ project, index }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -25,7 +11,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
       viewport={{ once: true }}
       className="group relative bg-white/[0.02] border border-white/5 rounded-[2.5rem] overflow-hidden hover:border-blue-500/30 transition-all duration-500 flex flex-col h-full"
     >
-      {/* Image Container */}
       <div className="relative aspect-[16/10] overflow-hidden">
         <img 
           src={project.image} 
@@ -35,10 +20,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-60" />
         
-        {/* Hover Overlay */}
         <div className="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px]">
           <motion.div 
-            initial={{ scale: 0.8 }}
             whileHover={{ scale: 1.1 }}
             className="w-14 h-14 bg-white text-black rounded-full flex items-center justify-center shadow-2xl"
           >
@@ -47,7 +30,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         </div>
       </div>
 
-      {/* Content */}
       <div className="p-8 flex flex-col flex-grow">
         <div className="flex flex-wrap gap-2 mb-6">
           {project.tags.map(tag => (
@@ -78,7 +60,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         </div>
       </div>
 
-      {/* Accent Line */}
       <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-blue-500 group-hover:w-full transition-all duration-700" />
     </motion.div>
   );

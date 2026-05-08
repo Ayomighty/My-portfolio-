@@ -24,7 +24,7 @@ export const PROJECTS = [
     link: "#"
   },
   {
-    id: "quiz-app",
+    id: "mastermind",
     title: "Mastermind Quiz Engine",
     description: "An interactive trivia application with deep category logic ranging from Afrobeat history to anime power levels and chess legacy. Features custom state management for real-time scoring and final result calculations.",
     tags: ["JavaScript", "Logic", "UI Animation"],
@@ -40,7 +40,7 @@ export const PROJECTS = [
     link: "#"
   },
   {
-    id: "styles-conference",
+    id: "chicago",
     title: "Chicago Styles Conference",
     description: "An editorial-style event management landing page. Features a clean multi-column layout for speakers and session schedules, built using premium typography and balanced negative space.",
     tags: ["HTML", "CSS", "Editorial Layout"],
@@ -50,5 +50,5 @@ export const PROJECTS = [
 ];
 
 export const SKILLS = [
-  "React.js", "JavaScript (ES6+)", "Tailwind CSS", "HTML5/CSS3", "RESTful APIs", "TypeScript", "Responsive Design", "Motion UI", "Vite", "Git/GitHub"
+  "React.js", "JavaScript (ES6+)", "Tailwind CSS", "HTML5/CSS3", "RESTful APIs", "Node.js", "Responsive Design", "Motion UI", "Vite", "Git/GitHub"
 ];

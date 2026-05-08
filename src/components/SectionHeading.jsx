@@ -1,14 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 
-interface SectionHeadingProps {
-  badge: string;
-  title: string;
-  description?: string;
-  align?: 'left' | 'center';
-}
-
-const SectionHeading: React.FC<SectionHeadingProps> = ({ badge, title, description, align = 'left' }) => {
+const SectionHeading = ({ badge, title, description, align = 'left' }) => {
   return (
     <div className={`mb-16 ${align === 'center' ? 'text-center' : 'text-left'}`}>
       <motion.div
